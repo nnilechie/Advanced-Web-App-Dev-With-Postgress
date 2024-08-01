@@ -1,0 +1,19 @@
+{
+  "dependencies": {
+    "body-parser": "^1.20.2",
+    "express": "^4.19.2",
+    "express-handlebars": "^7.1.3",
+    "pg": "^8.12.0",
+    "sequelize": "^6.37.3"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "advanced-web-app-dev-with-postgres",
+  "version": "1.0.0",
+  "description": "update to assignment 5 implementing postgress",
+  "main": "server.js",
+  "devDependencies": {},
+  "author": "Nicholas Ilechie",
+  "license": "ISC"
+}
