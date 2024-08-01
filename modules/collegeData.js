@@ -58,7 +58,10 @@ Student.belongsTo(Course, { foreignKey: 'courseId', as: 'course' });
 module.exports.initialize = function () {
     return sequelize.sync()
         .then(() => console.log('Database synchronized'))
-        .catch(err => console.error('Database synchronization failed:', err));
+        .catch(err => {
+            console.error('Database synchronization failed:', err);
+            throw err; // Re-throw the error to be caught by the calling function
+        });
 };
 
 
