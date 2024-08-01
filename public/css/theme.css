@@ -1,0 +1,81 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;700&family=Lobster&display=swap');
+
+body, html {
+    height: 100%;
+    margin: 0;
+    font-family: 'Roboto', sans-serif;
+    background: linear-gradient(to bottom right, #002035, #005122);
+    background-attachment: fixed;
+    overflow: auto;
+}
+
+.navbar {
+    background: linear-gradient(to right, #004d83, #005a25);
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.navbar-brand {
+    font-weight: 700;
+    color: #ecf0f1 !important;
+    text-shadow: 1px 1px 2px rgba(0,0,0,.5);
+}
+
+.nav-link {
+    font-family: 'Lobster', cursive;
+    color: #bdc3c7 !important;
+    transition: color 0.3s ease;
+}
+
+.nav-link:hover {
+    color: #ecf0f1 !important;
+}
+
+.nav-link:active{
+    color: #008f3b !important;
+} 
+
+.btn-primary {
+    background: linear-gradient(to bottom, #3498db, #2980b9);
+    border: none;
+    box-shadow: 0 2px 4px rgba(0,0,0,.1);
+}
+
+.btn-primary:hover {
+    background: linear-gradient(to bottom, #2980b9, #3498db);
+}
+
+.table tr:nth-child(odd) td {
+    background-color: rgba(236, 240, 241, 0.7);
+}
+
+p, li, label, td, th{
+    color: #ecf0f1;
+}
+h1, h2, h3, h4, h5, h6 {
+
+    padding: 10px 0;
+    color: #ecf0f1;
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    letter-spacing: 1px;
+}
+
+a {
+    color: #ecf0f1;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #e42222;
+    text-decoration: none;
+}
+
+legend {
+    padding: 10px 0;
+    color: #ecf0f1;
+    font-family: 'Lobster', cursive;
+    font-size: 2em;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.1);
+    letter-spacing: 1px;
+}

@@ -1,0 +1,26 @@
+<div class="row">
+    <div class="col-md-12">
+        <br>
+        <h2>Edit Course</h2>
+        <hr />
+        <form method="POST" action="/course/update">
+            <div class="row">
+                <div class="col-md-3">
+                    <div class="form-group">
+                        <label for="courseCode">Course Code</label>
+                        <input class="form-control" id="courseCode" name="courseCode" type="text" value="{{course.courseCode}}" required />
+                    </div>
+                </div>
+                <div class="col-md-9">
+                    <div class="form-group">
+                        <label for="courseDescription">Course Description</label>
+                        <input class="form-control" id="courseDescription" name="courseDescription" type="text" value="{{course.courseDescription}}" required />
+                    </div>
+                </div>
+            </div>
+            <input type="hidden" name="courseId" value="{{course.courseId}}" />
+            <hr />
+            <input type="submit" class="btn btn-primary float-right" value="Update Course" />
+        </form>
+    </div>
+</div>

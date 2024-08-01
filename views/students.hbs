@@ -1,0 +1,39 @@
+<div class="row">
+    <main class="col-md-12">
+        <br>
+        <h2>Students <a href="/students/add" class="btn btn-success float-right">Add New Student</a></h2>
+        <hr />
+        {{#if students.length}}
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Student Num</th>
+                    <th>Full Name</th>
+                    <th>Email</th>
+                    <th>Address</th>
+                    <th>Status</th>
+                    <th>Course</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+            {{#each students}}
+                <tr>
+                    <td>{{studentNum}}</td>
+                    <td><a href="/student/{{studentNum}}">{{firstName}} {{lastName}}</a></td>
+                    <td><a href="mailto:{{email}}">{{email}}</a></td>
+                    <td>{{addressStreet}} {{addressCity}} {{addressProvince}}</td>
+                    <td>{{status}}</td>
+                    <td>{{#if course}}{{course.courseCode}}: {{course.courseDescription}}{{else}}N/A{{/if}}</td>
+                    <td><a href="/student/delete/{{studentNum}}" class="btn btn-danger">Remove</a></td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+        {{else}}
+        <div class="col-md-12 text-center">
+            <strong>{{message}}</strong>
+        </div>
+        {{/if}}
+    </main>
+</div>

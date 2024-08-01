@@ -1,0 +1,31 @@
+<div class="row">
+    <main class="col-md-12">
+        <br>
+        <h2>Courses <a href="/courses/add" class="btn btn-success float-right">Add New Course</a></h2>
+        <hr />
+        {{#if courses}}
+        <table class="table">
+            <thead>
+                <tr>
+                    <th>Course Code</th>
+                    <th>Course Description</th>
+                    <th>Remove</th>
+                </tr>
+            </thead>
+            <tbody>
+            {{#each courses}}
+                <tr>
+                    <td><a href="/course/{{courseId}}">{{courseCode}}</a></td>
+                    <td><a href="/students?course={{courseId}}">{{courseDescription}}</a></td>
+                    <td><a href="/course/delete/{{courseId}}" class="btn btn-danger">Remove</a></td>
+                </tr>
+            {{/each}}
+            </tbody>
+        </table>
+        {{else}}
+        <div class="col-md-12 text-center">
+            <strong>{{message}}</strong>
+        </div>
+        {{/if}}
+    </main>
+</div>
