@@ -7,8 +7,10 @@
     "sequelize": "^6.37.3"
   },
   "scripts": {
-    "start": "node server.js"
-  },
+  "start": "node server.js",
+  "build": "npm install",
+  "postinstall": "npm install pg"
+},
   "name": "advanced-web-app-dev-with-postgres",
   "version": "1.0.0",
   "description": "update to assignment 5 implementing postgress",
