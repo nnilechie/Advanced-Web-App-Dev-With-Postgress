@@ -92,38 +92,6 @@ app.get('/students', (req, res) => {
     });
 });
 
-
-
-// // Display student by studentNum
-// app.get('/student/:studentNum', (req, res) => {
-//     let viewData = {};
-//     collegeData.getStudentByNum(req.params.studentNum).then((data) => {
-//         if (data) {
-//             viewData.student = data;
-//         } else {
-//             viewData.student = null;
-//         }
-//     }).catch(() => {
-//         viewData.student = null;
-//     }).then(collegeData.getCourses)
-//     .then((data) => {
-//         viewData.courses = data;
-//         for (let i = 0; i < viewData.courses.length; i++) {
-//             if (viewData.courses[i].courseId == viewData.student.course) {
-//                 viewData.courses[i].selected = true;
-//             }
-//         }
-//     }).catch(() => {
-//         viewData.courses = [];
-//     }).then(() => {
-//         if (viewData.student == null) {
-//             res.status(404).send("Student Not Found");
-//         } else {
-//             res.render("student", { viewData: viewData });
-//         }
-//     });
-// });
-
 // Display student by studentNum
 app.get('/student/:studentNum', (req, res) => {
     let viewData = {};
@@ -197,7 +165,6 @@ app.post('/student/update', (req, res) => {
 });
 
 
-
 // Delete a student
 app.get('/student/delete/:studentNum', (req, res) => {
     collegeData.deleteStudentByNum(req.params.studentNum).then(() => {
@@ -220,7 +187,6 @@ app.get('/courses', (req, res) => {
         res.render('courses', { message: "Error fetching courses" });
     });
 });
-
 
 // Display course details by courseId
 app.get('/course/:courseId', (req, res) => {

@@ -67,7 +67,7 @@ module.exports.getAllStudents = function () {
     return Student.findAll({
         include: [{
             model: Course,
-            as: 'course',  // Use the alias here
+            as: 'course',
             required: false  // LEFT OUTER JOIN to include students without courses
         }]
     }).then(students => {
@@ -77,7 +77,6 @@ module.exports.getAllStudents = function () {
         return students;
     });
 };
-
 
 // Get all TAs
 module.exports.getTAs = function () {
