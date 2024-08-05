@@ -5,12 +5,12 @@ const sequelize = new Sequelize('SenecaDB', 'SenecaDB_owner', 'wUZfuMsO40SL', {
     dialect: 'postgres',
     dialectModule: require('pg'),
     port: 5432,
-    // dialectOptions: {
-    //     ssl: {
-    //         require: true,
-    //         rejectUnauthorized: false
-    //     }
-    // },
+    dialectOptions: {
+        ssl: {
+            require: true,
+            rejectUnauthorized: false
+        }
+    },
     logging: console.log
 });
 
