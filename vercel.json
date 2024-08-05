@@ -13,6 +13,9 @@
   "routes": [
     {  "src": "/(.*)","dest": "server.js" }
   ],
+  "rewrites": [
+    { "source": "/css/(.*)", "destination": "/public/css/$1" }
+  ],
   "env": {
         "DB_NAME": "SenecaDB",
         "DB_USER": "SenecaDB_owner",
