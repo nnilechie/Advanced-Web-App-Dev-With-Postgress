@@ -8,8 +8,7 @@
   },
   "scripts": {
   "start": "node server.js",
-  "build": "npm install",
-  "postinstall": "npm install pg"
+  "build": "npm install"
 },
   "name": "advanced-web-app-dev-with-postgres",
   "version": "1.0.0",
