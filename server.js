@@ -16,6 +16,7 @@ const path = require('path');
 const collegeData = require('./modules/collegeData');
 const exphbs = require('express-handlebars');
 const bodyParser = require('body-parser');
+const PORT = process.env.PORT || 3000;
 
 // Custom Handlebars helpers
 const hbs = exphbs.create({
@@ -255,6 +256,6 @@ app.use((err, req, res, next) => {
 // Start server
 //const PORT = process.env.PORT || 8080;
 app.listen(PORT, () => {
-    console.log(`Server running on port`);
-});
+    console.log(`Server is running on port ${PORT}`);
+  });
 
