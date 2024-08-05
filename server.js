@@ -51,6 +51,7 @@ app.set('views', path.join(__dirname, 'views'));
 
 // Middleware to serve static files from the 'public' directory
 app.use(express.static('public'));
+app.use(express.static(__dirname + '/public'));
 
 // Middleware for Nav
 app.use(function(req, res, next) {
