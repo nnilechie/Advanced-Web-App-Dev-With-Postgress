@@ -1,11 +1,29 @@
+// const Sequelize = require('sequelize');
+// const pg = require('pg');
+
+// const sequelize = new Sequelize('SenecaDB', 'SenecaDB_owner', 'wUZfuMsO40SL', {
+//     host: 'ep-super-scene-a5jm773y.us-east-2.aws.neon.tech',
+//     dialect: 'postgres',
+//     dialectModule: require('pg'),
+//     port: 5432,
+//     dialectOptions: {
+//         ssl: {
+//             require: true,
+//             rejectUnauthorized: false
+//         }
+//     },
+//     logging: console.log
+// });
+
+//Vercel PG env setup
 const Sequelize = require('sequelize');
 const pg = require('pg');
 
-const sequelize = new Sequelize('SenecaDB', 'SenecaDB_owner', 'wUZfuMsO40SL', {
-    host: 'ep-super-scene-a5jm773y.us-east-2.aws.neon.tech',
+const sequelize = new Sequelize(process.env.DB_NAME, process.env.DB_USER, process.env.DB_PASS, {
+    host: process.env.DB_HOST,
     dialect: 'postgres',
-    dialectModule: require('pg'),
-    port: 5432,
+    dialectModule: pg,
+    port: process.env.DB_PORT || 5432,
     dialectOptions: {
         ssl: {
             require: true,
@@ -14,6 +32,8 @@ const sequelize = new Sequelize('SenecaDB', 'SenecaDB_owner', 'wUZfuMsO40SL', {
     },
     logging: console.log
 });
+
+
 
 // Define the Student model
 const Student = sequelize.define('Student', {
