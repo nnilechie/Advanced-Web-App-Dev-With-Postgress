@@ -12,5 +12,12 @@
   ],
   "routes": [
     {  "src": "/(.*)","dest": "server.js" }
-  ]
+  ],
+  "env": {
+        "DB_NAME": "SenecaDB",
+        "DB_USER": "SenecaDB_owner",
+        "DB_PASS": "wUZfuMsO40SL",
+        "DB_HOST": "ep-super-scene-a5jm773y.us-east-2.aws.neon.tech",
+        "DB_PORT": "5432"
+    }
 }
