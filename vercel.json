@@ -10,9 +10,11 @@
       "use": "@vercel/static"
     }
   ],
-  "rewrites": [
-    { "source": "/css/(.*)", "destination": "/public/css/$1" }
+  "routes": [
+    {  "src": "/(.*)","dest": "server.js" }
   ],
+  "trailingSlash": true
+  ,
   "env": {
         "DB_NAME": "SenecaDB",
         "DB_USER": "SenecaDB_owner",
